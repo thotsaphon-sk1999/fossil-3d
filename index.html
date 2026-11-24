@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>นักบรรพชีวินวิทยาฝึกหัด | รายวิชา 404225 ธรณีวิทยาและบรรพชีวินวิทยาในท้องถิ่น</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Prompt', 'Sarabun', 'sans-serif'],
+            body: ['Sarabun', 'Prompt', 'sans-serif'],
+          },
+          colors: {
+            cream: '#FAF7F2',
+            sand: '#F3ECE1',
+            sandstone: '#D2B48C',
+            terracotta: '#8B4513',
+            terracottaDark: '#6E350D',
+            charcoal: '#2C241E',
+            muted: '#6E6259',
+            borderWarm: '#E6DDD0',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #FAF7F2;
+      color: #2C241E;
+      font-family: 'Prompt', 'Sarabun', sans-serif;
+    }
+    .dashed-embed {
+      border: 2px dashed #C7B9A5;
+      background-color: #FDFBF7;
+      transition: all 0.2s ease;
+    }
+    .dashed-embed:hover {
+      border-color: #8B4513;
+      background-color: #FAF5EC;
+    }
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-6px) rotate(2deg); }
+    }
+    .fossil-float {
+      animation: floatSlow 4s ease-in-out infinite;
+    }
+    model-viewer { display: block; }
+    #fossil-dialog { position:fixed; inset:0; margin:0; width:100%; height:100%; max-width:none; max-height:none; border:0; padding:0; background:#faf7f2; color:#292524; z-index:99999; }
+    #fossil-dialog[open] { display:flex; flex-direction:column; }
+    #fossil-dialog header { display:flex; flex-wrap:wrap; align-items:center; gap:8px; padding:12px; background:#e7ded1; }
+    #fossil-dialog button, #fossil-dialog a { padding:8px 12px; border-radius:8px; background:#fff; color:#292524; font-size:14px; }
+    #fossil-dialog model-viewer { flex:1; min-height:0; width:100%; background:#e7e5e4; }
+
+    div:fullscreen > model-viewer { width: 100%; height: 100%; background: #e7e5e4; }
+  </style>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-terracotta selection:text-white">
+
+  <!-- Top Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-borderWarm shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <!-- Brand / Course Info -->
+      <div class="flex items-center gap-3 cursor-pointer" onclick="navigateTo('home')">
+        <div class="w-10 h-10 rounded-xl bg-terracotta text-white flex items-center justify-center shadow-sm shrink-0">
+          <!-- Fossil Ammonite SVG Icon -->
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 3a9 9 0 1 0 9 9c0-3.87-3.13-7-7-7a5 5 0 0 0-5 5 3 3 0 0 0 3 3 1.5 1.5 0 0 0 1.5-1.5" stroke-linecap="round"/>
+            <path d="M12 3v3M18.36 5.64l-2.12 2.12M21 12h-3M18.36 18.36l-2.12-2.12M12 21v-3M5.64 18.36l2.12-2.12M3 12h3M5.64 5.64l2.12 2.12" stroke-linecap="round" stroke-opacity="0.6"/>
+          </svg>
+        </div>
+        <div>
+          <div class="text-[11px] sm:text-xs font-medium text-terracotta tracking-wide">
+            รายวิชา 404225 ธรณีวิทยาและบรรพชีวินวิทยาในท้องถิ่น
+          </div>
+          <h1 class="text-base sm:text-lg font-bold text-charcoal leading-tight">
+            นักบรรพชีวินวิทยาฝึกหัด
+          </h1>
+          <p class="text-[11px] text-muted hidden sm:block">
+            สื่อการเรียนรู้แบบมีปฏิสัมพันธ์ เรื่องความหลากหลายของซากดึกดำบรรพ์สัตว์มีกระดูกสันหลัง
+          </p>
+        </div>
+      </div>
+
+      <!-- Main Menu -->
+      <nav class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-1 md:pb-0">
+        <button onclick="navigateTo('home')" id="nav-home" class="nav-btn px-3.5 py-2 rounded-xl text-sm font-medium transition-all whitespace-nowrap">
+          หน้าหลัก
+        </button>
+        <button onclick="navigateTo('mission1', 1)" id="nav-mission1" class="nav-btn px-3.5 py-2 rounded-xl text-sm font-medium transition-all whitespace-nowrap">
+          ภารกิจที่ 1
+        </button>
+        <button onclick="navigateTo('mission2')" id="nav-mission2" class="nav-btn px-3.5 py-2 rounded-xl text-sm font-medium transition-all whitespace-nowrap">
+          ภารกิจที่ 2
+        </button>
+        <button onclick="navigateTo('mission3')" id="nav-mission3" class="nav-btn px-3.5 py-2 rounded-xl text-sm font-medium transition-all whitespace-nowrap">
+          ภารกิจที่ 3
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Prototype Helper Banner -->
+  <div class="bg-sand/80 border-b border-borderWarm text-xs text-charcoal/80 py-1.5 px-4 text-center">
+    <span class="inline-flex items-center gap-1.5 font-medium">
+      <span class="w-2 h-2 rounded-full bg-terracotta animate-pulse"></span>
+      ต้นแบบโครงสร้างสื่อการเรียนรู้ (Canva Website / Google Sites Prototype) · โมเดล 3 มิติในภารกิจที่ 1 ขั้นสำรวจเชื่อมต่อ GitHub Pages · กล่องเส้นประที่เหลือเป็นพื้นที่สำหรับสื่อและ Google Forms จริง
+    </span>
+  </div>
+
+  <!-- Main Content Container -->
+  <main id="app-content" class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8">
+    <!-- Dynamic Views Rendered Here -->
+  </main>
+
+  <!-- Toast / Message Box (Replaces alert) -->
+  <div id="toast-box" class="fixed bottom-5 right-5 z-50 max-w-sm bg-charcoal text-white px-4 py-3 rounded-2xl shadow-xl border border-white/10 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex items-start gap-3">
+    <div class="w-6 h-6 rounded-full bg-terracotta flex items-center justify-center shrink-0 mt-0.5">
+      <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+    </div>
+    <div class="text-sm leading-snug" id="toast-message">ข้อความแจ้งเตือน</div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-borderWarm mt-12 py-6 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-xs sm:text-sm text-muted text-center sm:text-left">
+      <p class="font-medium text-charcoal">สาขาวิชาวิทยาศาสตร์ทั่วไป คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏนครราชสีมา</p>
+      <p>รายวิชา 404225 ธรณีวิทยาและบรรพชีวินวิทยาในท้องถิ่น</p>
+    </div>
+  </footer>
+
+  <script>
+    // Application State
+    const state = {
+      currentPage: 'home', // 'home', 'mission1', 'mission2', 'mission3'
+      mission1Step: 1,     // 1 to 5
+      form12Submitted: false,
+      teacherPreviewOpen: false,
+      mockRotation: 25,
+    };
+
+    // Toast Notification Helper
+    let toastTimeout;
+    function showToast(msg) {
+      const box = document.getElementById('toast-box');
+      const text = document.getElementById('toast-message');
+      text.textContent = msg;
+      box.classList.remove('translate-y-24', 'opacity-0');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        box.classList.add('translate-y-24', 'opacity-0');
+      }, 3600);
+    }
+
+    // Navigation Controller
+    function navigateTo(page, step = 1) {
+      state.currentPage = page;
+      if (page === 'mission1') {
+        state.mission1Step = step;
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      render();
+    }
+
+    function setMissionStep(step) {
+      state.mission1Step = step;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      render();
+    }
+
+    function simulateSubmitForm12() {
+      state.form12Submitted = true;
+      showToast('ส่งใบกิจกรรมที่ 1.2 สำเร็จ! ปลดล็อก "แฟ้มเฉลย" ในขั้นที่ 3 (Explain) เรียบร้อยแล้ว');
+      render();
+    }
+
+    function toggleTeacherPreview() {
+      state.teacherPreviewOpen = !state.teacherPreviewOpen;
+      render();
+    }
+
+    function rotateMockModel(deg) {
+      state.mockRotation = (state.mockRotation + deg) % 360;
+      const el = document.getElementById('mock-fossil-svg');
+      if (el) {
+        el.style.transform = `rotate(${state.mockRotation}deg) scale(1.05)`;
+      }
+    }
+
+    // Update Active Navigation Styling
+    function updateNavStyles() {
+      const buttons = ['home', 'mission1', 'mission2', 'mission3'];
+      buttons.forEach(id => {
+        const btn = document.getElementById(`nav-${id}`);
+        if (!btn) return;
+        if (state.currentPage === id) {
+          btn.className = 'nav-btn px-3.5 py-2 rounded-xl text-sm font-semibold bg-terracotta text-white shadow-sm transition-all whitespace-nowrap';
+        } else {
+          btn.className = 'nav-btn px-3.5 py-2 rounded-xl text-sm font-medium text-charcoal hover:bg-sand transition-all whitespace-nowrap';
+        }
+      });
+    }
+
+    // Render Home Page
+    function renderHome() {
+      return `
+        <div class="space-y-8">
+          <!-- Hero Banner -->
+          <section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#3D2616] via-[#5A351C] to-[#8B4513] text-white p-6 sm:p-10 shadow-md">
+            <div class="relative z-10 max-w-3xl space-y-4">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-amber-100 text-xs font-medium backdrop-blur-sm">
+                <span>🧭 คู่มือภาคสนามและห้องปฏิบัติการเสมือน</span>
+              </span>
+              <h2 class="text-2xl sm:text-4xl font-bold tracking-tight leading-snug">
+                ยินดีต้อนรับ นักบรรพชีวินวิทยาฝึกหัด
+              </h2>
+              <p class="text-sm sm:text-base text-amber-50/90 font-body leading-relaxed">
+                สำรวจ สังเกต เปรียบเทียบ และจำแนกซากดึกดำบรรพ์สัตว์มีกระดูกสันหลังจากแหล่งซากดึกดำบรรพ์สำคัญในจังหวัดนครราชสีมา ผ่านโมเดล 3 มิติและภารกิจสืบเสาะหาความรู้ 5 ขั้นตอน (5E)
+              </p>
+              <div class="pt-2 flex flex-wrap items-center gap-3">
+                <button onclick="navigateTo('mission1', 1)" class="px-5 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-charcoal font-bold text-sm sm:text-base shadow-md transition-all flex items-center gap-2">
+                  <span>ไปที่แบบทดสอบก่อนเรียน</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                </button>
+                <button onclick="document.getElementById('missions-grid').scrollIntoView({behavior:'smooth'})" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium text-sm sm:text-base border border-white/20 transition-all">
+                  ดูแผนที่ภารกิจทั้ง 3 สัปดาห์
+                </button>
+              </div>
+            </div>
+            <!-- Decorative Fossil Silhouette -->
+            <div class="hidden lg:block absolute right-8 bottom-4 opacity-15 pointer-events-none fossil-float">
+              <svg class="w-56 h-56 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <path d="M12 2a10 10 0 1 0 10 10c0-4.42-3.58-8-8-8a6 6 0 0 0-6 6 4 4 0 0 0 4 4 2 2 0 0 0 2-2"/>
+              </svg>
+            </div>
+          </section>
+
+          <!-- Instructions & Assessment Overview Grid -->
+          <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- คำชี้แจง (2 cols) -->
+            <div class="lg:col-span-2 bg-white rounded-3xl p-6 sm:p-7 border border-borderWarm shadow-sm">
+              <div class="flex items-center gap-2.5 mb-4">
+                <span class="px-3 py-1 rounded-full bg-terracotta/10 text-terracotta text-xs font-bold">ข้อปฏิบัติในการเรียน</span>
+                <h3 class="text-lg sm:text-xl font-bold text-charcoal">คำชี้แจง</h3>
+              </div>
+              <ol class="space-y-3.5 text-sm sm:text-base font-body text-charcoal/90">
+                <li class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-terracotta text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">1</span>
+                  <span>เรียนคนเดียว คนละ 1 เครื่อง และเข้าสู่ระบบด้วยบัญชีมหาวิทยาลัยก่อนทำฟอร์มทุกฟอร์ม</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-terracotta text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">2</span>
+                  <span>ทำตามลำดับหน้า แล้วกดปุ่ม <strong>"ถัดไป"</strong> ท้ายหน้า ดูเวลาโดยประมาณที่หัวหน้าทุกหน้า</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-terracotta text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">3</span>
+                  <span>ในขั้นสำรวจ ให้สังเกต จำแนก และให้เหตุผลด้วยตัวเองก่อน ส่งฟอร์มแล้วจึงเปิดแฟ้มเฉลยได้</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-terracotta text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">4</span>
+                  <span>แต่ละภารกิจใช้เวลา <strong>240 นาที (สัปดาห์ละ 4 ชั่วโมง)</strong> ทุกหน้ามีลำดับงานพร้อมเวลา ช่วงที่มีป้าย <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-900 font-semibold text-xs">"ผู้สอนนำในชั้นเรียน"</span> ให้ฟังอาจารย์ ถ้าติดขัดเรื่องอุปกรณ์หรือบัญชี ให้ยกมือเรียกอาจารย์</span>
+                </li>
+              </ol>
+            </div>
+
+            <!-- แบบวัด / แบบทดสอบ (1 col) -->
+            <div class="bg-sand/60 rounded-3xl p-6 sm:p-7 border border-borderWarm shadow-sm flex flex-col justify-between">
+              <div class="space-y-3">
+                <span class="inline-block px-3 py-1 rounded-full bg-charcoal text-white text-xs font-semibold">
+                  แบบวัด / แบบทดสอบ
+                </span>
+                <h3 class="text-lg font-bold text-charcoal">
+                  แบบทดสอบวัดทักษะการจัดจำแนก ก่อนเรียนและหลังเรียน
+                </h3>
+                <p class="text-sm font-body text-charcoal/85 leading-relaxed">
+                  <strong>ปรนัย 30 ข้อ เวลา 20 นาที</strong><br/>
+                  • ก่อนเรียนอยู่ใน <strong>ภารกิจที่ 1 ขั้นที่ 1</strong><br/>
+                  • หลังเรียนอยู่ใน <strong>ภารกิจที่ 3 ขั้นที่ 5</strong><br/>
+                  • แบบวัดทักษะครั้งที่ 1–3 (ชุดละ 20 ข้อ 20 นาที) อยู่ใน <strong>ขั้นที่ 5</strong> ของแต่ละภารกิจ
+                </p>
+              </div>
+              <div class="pt-5">
+                <button onclick="navigateTo('mission1', 1)" class="w-full py-2.5 px-4 rounded-xl bg-terracotta hover:bg-terracottaDark text-white font-semibold text-sm transition-all shadow-sm">
+                  เริ่มทำแบบทดสอบก่อนเรียน →
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- แนะนำการใช้สื่อ (3-column interactive tutorial) -->
+          <section class="bg-white rounded-3xl p-6 sm:p-7 border border-borderWarm shadow-sm space-y-5">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <div>
+                <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 text-xs font-bold">ทดลองใช้งานได้ตลอด · ไม่นับคะแนน</span>
+                <h3 class="text-lg sm:text-xl font-bold text-charcoal mt-1.5">แนะนำการใช้สื่อ</h3>
+              </div>
+              <p class="text-xs sm:text-sm text-muted">
+                ผู้สอนสาธิตในภารกิจที่ 1 ขั้นที่ 1 เปิดวิดีโอดูซ้ำ ลองหมุนโมเดลฝึกหัด และส่งฟอร์มฝึกหัดได้ตลอด
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+              <!-- 1. วิดีโอแนะนำ 3 นาที -->
+              <div class="dashed-embed rounded-2xl p-4 flex flex-col justify-between space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="px-2.5 py-1 rounded-lg bg-red-100 text-red-800 text-xs font-bold">YouTube Embed</span>
+                  <span class="text-xs text-muted">3 นาที</span>
+                </div>
+                <div class="aspect-video rounded-xl bg-charcoal/90 text-white flex flex-col items-center justify-center p-4 text-center relative group cursor-pointer" onclick="showToast('จำลองการเล่นวิดีโอ: สาธิตการหมุน ขยาย วัดโมเดล และเปิดแฟ้มเฉลย')">
+                  <div class="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform mb-2">
+                    <svg class="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                  </div>
+                  <p class="text-sm font-semibold">วิดีโอแนะนำ 3 นาที</p>
+                  <p class="text-[11px] text-gray-300 mt-0.5">หมุน ขยาย วัดโมเดล ส่งฟอร์ม เปิดแฟ้มเฉลย</p>
+                </div>
+                <p class="text-[11px] text-muted">หมายเหตุ: ฝังวิดีโอ YouTube แบบไม่เป็นสาธารณะ (Unlisted)</p>
+              </div>
+
+              <!-- 2. โมเดลฝึกหัด 1 ชิ้น -->
+              <div class="dashed-embed rounded-2xl p-4 flex flex-col justify-between space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="px-2.5 py-1 rounded-lg bg-sky-100 text-sky-900 text-xs font-bold">GLB · 3D Viewer</span>
+                  <span class="text-xs text-muted">โมเดลฝึกหัด 1 ชิ้น</span>
+                </div>
+                <div class="relative aspect-video rounded-xl bg-stone-200 border border-stone-300 overflow-hidden">
+                  <model-viewer src="https://thotsaphon-sk1999.github.io/fossil-3d/GLB1/1-1_Fish_Scales.glb" alt="โมเดลฝึกหัด" camera-controls auto-rotate touch-action="pan-y" shadow-intensity="1" style="width:100%;height:100%" onerror="this.nextElementSibling.hidden=false"></model-viewer>
+                  <div hidden class="absolute inset-0 bg-white/95 p-3 text-xs text-red-700">โหลดโมเดลไม่สำเร็จ กรุณาตรวจสอบอินเทอร์เน็ต</div>
+                </div>
+                <div class="flex flex-wrap justify-center gap-2">
+                  <button class="px-2 py-1 rounded-lg bg-sand text-xs" onclick="const m=this.parentElement.previousElementSibling.querySelector('model-viewer');m.cameraOrbit='auto auto auto';m.cameraTarget='auto auto auto';m.fieldOfView='auto';m.jumpCameraToGoal()">รีเซ็ต</button>
+                  <button class="px-2 py-1 rounded-lg bg-terracotta text-white text-xs" onclick="openFossilViewer(this)">ขยายโมเดล</button>
+                  <a class="px-2 py-1 rounded-lg bg-sand text-xs" href="${fossilLink('https://thotsaphon-sk1999.github.io/fossil-3d/GLB1/1-1_Fish_Scales.glb', 'โมเดลฝึกหัด').replace(/&/g, '&amp;')}" target="_blank" rel="noopener noreferrer">เปิดแท็บใหม่</a>
+                </div>
+                <p class="text-[11px] text-muted">ลองลากเพื่อหมุน และซูมเข้า–ออกเพื่อสำรวจโมเดล</p>
+              </div>
+
+              <!-- 3. ฟอร์มฝึกหัด 1 ข้อ -->
+              <div class="dashed-embed rounded-2xl p-4 flex flex-col justify-between space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="px-2.5 py-1 rounded-lg bg-purple-100 text-purple-900 text-xs font-bold">Google Forms</span>
+                  <span class="text-xs text-muted">ฟอร์มฝึกหัด 1 ข้อ</span>
+                </div>
+                <div class="aspect-video rounded-xl bg-purple-50/70 border border-purple-200 p-3.5 flex flex-col justify-between">
+                  <div>
+                    <p class="text-xs font-bold text-purple-950">ทดสอบการเข้าสู่ระบบบัญชีมหาวิทยาลัย</p>
+                    <p class="text-[11px] text-purple-800/80 mt-1">ตรวจว่าเข้าสู่ระบบด้วยอีเมล @nrru.ac.th แล้วก่อนทำภารกิจจริง</p>
+                  </div>
+                  <button onclick="showToast('ตรวจสอบบัญชีมหาวิทยาลัยเรียบร้อย พร้อมเริ่มภารกิจที่ 1!')" class="w-full py-2 rounded-lg bg-purple-700 hover:bg-purple-800 text-white text-xs font-semibold transition-all">
+                    จำลอง: ส่งฟอร์มฝึกหัด 1 ข้อ
+                  </button>
+                </div>
+                <p class="text-[11px] text-muted">ฝัง Google Form แบบเก็บอีเมลมหาวิทยาลัยอัตโนมัติ</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 3 Mission Cards -->
+          <section id="missions-grid" class="space-y-4">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl sm:text-2xl font-bold text-charcoal">แผนที่ภารกิจการเรียนรู้ (3 ภารกิจ)</h3>
+              <span class="text-xs sm:text-sm text-muted">ภารกิจละ 240 นาที (5 ขั้นตอน 5E)</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <!-- Mission 1 -->
+              <div class="bg-white rounded-3xl p-6 border-2 border-terracotta/40 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between">
+                    <span class="px-3 py-1 rounded-full bg-terracotta text-white text-xs font-bold">ภารกิจที่ 1</span>
+                    <span class="text-xs font-medium text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">พร้อมใช้งานครบ 5 ขั้น</span>
+                  </div>
+                  <h4 class="text-lg font-bold text-charcoal">ซากปะปนจากหมวดหินโคกกรวด</h4>
+                  <p class="text-xs font-semibold text-terracotta">แผนที่ 1 • สัปดาห์ที่ 10 • 240 นาที</p>
+                  <p class="text-sm font-body text-charcoal/85 leading-relaxed">
+                    สังเกต เปรียบเทียบ และจำแนกซากส่วนแข็ง 5 ชิ้น ได้แก่ กระดูกสันหลัง เกล็ดปลา ฟัน แผ่นกระดองเต่า และเกล็ดจระเข้ แล้วสร้างรูปจำแนกระดับกลุ่มสัตว์
+                  </p>
+                </div>
+                <div class="pt-5">
+                  <button onclick="navigateTo('mission1', 1)" class="w-full py-3 px-4 rounded-xl bg-terracotta hover:bg-terracottaDark text-white font-bold text-sm transition-all shadow-sm flex items-center justify-center gap-2">
+                    <span>เริ่มภารกิจ</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Mission 2 -->
+              <div class="bg-white rounded-3xl p-6 border border-borderWarm shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between">
+                    <span class="px-3 py-1 rounded-full bg-sand text-charcoal text-xs font-bold">ภารกิจที่ 2</span>
+                    <span class="text-xs text-muted">สัปดาห์ที่ 11</span>
+                  </div>
+                  <h4 class="text-lg font-bold text-charcoal">นักขุดค้นสะพานหิน</h4>
+                  <p class="text-xs font-semibold text-muted">แผนที่ 2 • สัปดาห์ที่ 11 • 240 นาที</p>
+                  <p class="text-sm font-body text-charcoal/85 leading-relaxed">
+                    เปิดหลุมขุดค้นจำลองเพื่อพบฟัน 5 กลุ่ม ได้แก่ ไดโนเสาร์กินเนื้อ อิกัวโนดอนต์ เทอโรซอร์ จระเข้ และฉลามน้ำจืด แล้วจำแนกด้วยเกณฑ์ลักษณะฟัน
+                  </p>
+                </div>
+                <div class="pt-5">
+                  <button onclick="navigateTo('mission2')" class="w-full py-3 px-4 rounded-xl bg-sand hover:bg-sandstone/40 text-charcoal font-bold text-sm transition-all flex items-center justify-center gap-2">
+                    <span>เริ่มภารกิจ</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Mission 3 -->
+              <div class="bg-white rounded-3xl p-6 border border-borderWarm shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between">
+                    <span class="px-3 py-1 rounded-full bg-sand text-charcoal text-xs font-bold">ภารกิจที่ 3</span>
+                    <span class="text-xs text-muted">สัปดาห์ที่ 12</span>
+                  </div>
+                  <h4 class="text-lg font-bold text-charcoal">ฟันใครเอ่ย ใต้บ่อทราย</h4>
+                  <p class="text-xs font-semibold text-muted">แผนที่ 3 • สัปดาห์ที่ 12 • 240 นาที</p>
+                  <p class="text-sm font-body text-charcoal/85 leading-relaxed">
+                    สังเกตและจำแนกฟันสัตว์เลี้ยงลูกด้วยนม 5 ชนิด ได้แก่ ม้าฮิปปาเรียน แรด หมูป่า ฮิปโป และช้างสเตโกโลโฟดอน แล้วเปรียบเทียบสองแหล่ง สองโลก
+                  </p>
+                </div>
+                <div class="pt-5">
+                  <button onclick="navigateTo('mission3')" class="w-full py-3 px-4 rounded-xl bg-sand hover:bg-sandstone/40 text-charcoal font-bold text-sm transition-all flex items-center justify-center gap-2">
+                    <span>เริ่มภารกิจ</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    // Render 5E Stepper Header for Mission 1
+    function renderMission1Header(step, title, subtitle, duration) {
+      const steps = [
+        { num: 1, en: 'Engage', th: 'สร้างความสนใจ' },
+        { num: 2, en: 'Explore', th: 'สำรวจและค้นหา' },
+        { num: 3, en: 'Explain', th: 'อธิบายและลงข้อสรุป' },
+        { num: 4, en: 'Elaborate', th: 'ขยายความรู้' },
+        { num: 5, en: 'Evaluate', th: 'ประเมินผล' },
+      ];
+
+      const stepperHTML = steps.map(s => {
+        const isActive = s.num === step;
+        const isDone = s.num < step;
+        let btnClass = 'bg-white border-borderWarm text-muted hover:border-terracotta/50';
+        if (isActive) btnClass = 'bg-terracotta border-terracotta text-white shadow-sm ring-2 ring-terracotta/20';
+        else if (isDone) btnClass = 'bg-amber-50 border-terracotta/40 text-terracotta font-semibold';
+
+        return `
+          <button onclick="setMissionStep(${s.num})" class="flex-1 min-w-[120px] px-3 py-2.5 rounded-xl border text-left transition-all ${btnClass}">
+            <div class="flex items-center justify-between text-xs font-bold">
+              <span>${s.num} ${s.en}</span>
+              ${s.num === 3 && !state.form12Submitted ? '<span>🔒</span>' : ''}
+            </div>
+            <div class="text-[11px] opacity-85 truncate mt-0.5">${s.th}</div>
+          </button>
+        `;
+      }).join('');
+
+      return `
+        <div class="bg-white rounded-3xl p-6 border border-borderWarm shadow-sm space-y-5 mb-6">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div>
+              <div class="text-xs font-bold text-terracotta uppercase tracking-wider">
+                ภารกิจที่ 1 - ซากปะปนจากหมวดหินโคกกรวด
+              </div>
+              <h2 class="text-xl sm:text-2xl font-bold text-charcoal mt-1">${title}</h2>
+              <p class="text-sm text-muted mt-0.5">${subtitle}</p>
+            </div>
+            <div class="flex items-center gap-2 self-start sm:self-center">
+              <span class="px-3.5 py-1.5 rounded-full bg-sand text-charcoal text-xs font-bold">
+                ⏱ ประมาณ ${duration}
+              </span>
+              <span class="px-3.5 py-1.5 rounded-full bg-terracotta text-white text-xs font-bold">
+                ขั้นที่ ${step}/5
+              </span>
+            </div>
+          </div>
+
+          <!-- ความก้าวหน้า 5E -->
+          <div class="space-y-2">
+            <div class="text-xs font-semibold text-muted">ความก้าวหน้า (คลิกสลับขั้นเพื่อดูตัวอย่างโครงสร้างแต่ละหน้าได้):</div>
+            <div class="flex items-stretch gap-2 overflow-x-auto pb-1">
+              ${stepperHTML}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Mission 1 - Step 1: Engage
+    function renderMission1Step1() {
+      return `
+        ${renderMission1Header(1, 'ขั้นที่ 1 สร้างความสนใจ (Engage)', 'ทำแบบทดสอบก่อนเรียน แล้วตั้งคำถามจากกล่องซากปะปน', '30 นาที')}
+
+        <div class="space-y-6">
+          <!-- ลำดับงานในขั้นนี้ -->
+          <div class="bg-sand/50 rounded-2xl p-4 border border-borderWarm">
+            <div class="text-xs font-bold text-charcoal mb-2.5">ลำดับงานในขั้นนี้ (รวม 30 นาที)</div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm">
+              <div class="bg-white p-3 rounded-xl border border-borderWarm flex items-center justify-between">
+                <span class="font-medium">1. แบบทดสอบวัดทักษะการจัดจำแนกก่อนเรียน</span>
+                <span class="px-2 py-0.5 rounded bg-sand font-bold text-xs shrink-0 ml-2">20 นาที</span>
+              </div>
+              <div class="bg-white p-3 rounded-xl border border-borderWarm flex items-center justify-between">
+                <span class="font-medium">2. กล่องซากปะปน</span>
+                <span class="px-2 py-0.5 rounded bg-sand font-bold text-xs shrink-0 ml-2">5 นาที</span>
+              </div>
+              <div class="bg-white p-3 rounded-xl border border-borderWarm flex items-center justify-between">
+                <span class="font-medium">3. จุดประสงค์และการใช้สื่อ</span>
+                <span class="px-2 py-0.5 rounded bg-sand font-bold text-xs shrink-0 ml-2">5 นาที</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- แบบทดสอบก่อนเรียน -->
+          <div class="bg-white rounded-3xl p-6 border border-borderWarm shadow-sm space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-900 text-xs font-bold">แบบวัด / แบบทดสอบ</span>
+                <h3 class="text-lg font-bold text-charcoal">แบบทดสอบวัดทักษะการจัดจำแนกก่อนเรียน</h3>
+              </div>
+              <span class="text-xs font-semibold text-terracotta">ปรนัย 4 ตัวเลือก 30 ข้อ เวลา 20 นาที</span>
+            </div>
+            <p class="text-sm text-charcoal/80 font-body">
+              ทำคนเดียว ไม่ต้องเปิดโมเดล (ชุดเดียวกับแบบทดสอบหลังเรียนในภารกิจที่ 3 ตั้งค่าสลับลำดับข้อและตัวเลือก ไม่แสดงคะแนนหรือเฉลยหลังส่ง เก็บอีเมลมหาวิทยาลัยเพื่อจับคู่คะแนน)
+            </p>
+            <div class="dashed-embed rounded-2xl p-8 text-center space-y-3">
+              <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-800 mx-auto flex items-center justify-center font-bold text-lg">📝</div>
+              <p class="font-bold text-charcoal">พื้นที่ฝัง Google Forms: แบบทดสอบก่อนเรียน (30 ข้อ / 20 นาที)</p>
+              <p class="text-xs text-muted max-w-md mx-auto">ใน Canva Website ให้ใช้คำสั่ง Embed วางลิงก์ Google Forms แบบทดสอบก่อนเรียนลงในกล่องนี้</p>
+            </div>
+          </div>
+
+          <!-- โมเดล 3 มิติ กล่องซากปะปน -->
+          <div class="bg-white rounded-3xl p-6 border border-borderWarm shadow-sm space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-900 text-xs font-bold">โมเดล 3 มิติ</span>
+                <h3 class="text-lg font-bold text-charcoal">กล่องซากปะปน (หมวดหินโคกกรวด)</h3>
+              </div>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-0.5 rounded-full bg-sand text-charcoal text-xs font-medium">กระดูกสันหลัง</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-sand text-charcoal text-xs font-medium">เกล็ด</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-sand text-charcoal text-xs font-medium">ฟัน</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-sand text-charcoal text-xs font-medium">ชิ้นกระดอง</span>
+              </div>
+            </div>
+
+            <div class="dashed-embed rounded-2xl p-6 sm:p-10 bg-stone-100/70 text-center space-y-4">
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto">
+                <div class="bg-white p-3 rounded-xl border border-borderWarm shadow-xs">
+                  <div class="text-2xl mb-1">🦴</div>
+                  <div class="text-xs font-bold">ชิ้นที่ 1</div>
+                  <div class="text-[11px] text-muted">ไม่ระบุป้ายกำกับ</div>
+                </div>
+                <div class="bg-white p-3 rounded-xl border border-borderWarm shadow-xs">
+                  <div class="text-2xl mb-1">🛡️</div>
+                  <div class="text-xs font-bold">ชิ้นที่ 2</div>
+                  <div class="text-[11px] text-muted">ไม่ระบุป้ายกำกับ</div>
+                </div>
+                <div class="bg-white p-3 rounded-xl border border-borderWarm shadow-xs">
+                  <div class="text-2xl mb-1">🦷</div>
+                  <div class="text-xs font-bold">ชิ้นที่ 3</div>
+                  <div class="text-[11px] text-muted">ไม่ระบุป้ายกำกับ</div>
+                </div>
+                <div class="bg-white p-3 rounded-xl border border-borderWarm shadow-xs">
+                  <div class="text-2xl mb-1">🐢</div>
+                  <div class="text-xs font-bold">ชิ้นที่ 4</div>
+                  <div class="text-[11px] text-muted">ไม่ระบุป้ายกำกับ</div>
+                </div>
+              </div>
+              <p class="font-bold text-charcoal text-sm sm:text-base">
+                พื้นที่ฝัง Sketchfab 3D: โมเดลรวมซากปะปนในฉากเดียว (ไม่มีป้ายกำกับ)
+              </p>
+              <p class="text-xs sm:text-sm text-terracotta font-medium">
+                คำถามชวนคิด: "ชิ้นส่วนเหล่านี้มาจากสัตว์กี่กลุ่ม และเรารู้ได้อย่างไร"
+              </p>
+            </div>
+          </div>
+
+          <!-- ผู้สอนนำในชั้นเรียน -->
+          <div class="rounded-3xl bg-amber-50 border-2 border-amber-300 p-6 space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 rounded-full bg-amber-500 text-white text-xs font-bold">ผู้สอนนำในชั้นเรียน</span>
+              <h4 class="font-bold text-amber-950">ผู้สอนแจ้งจุดประสงค์และสาธิตการใช้สื่อ</h4>
+            </div>
+            <ul class="text-sm text-amber-950/90 font-body space-y-1 list-disc list-inside">
+              <li>ชี้แจงว่าทุกกิจกรรมเป็นงานเดี่ยว สาธิตการหมุน ขยาย วัดขนาดโมเดล และการใช้รูปจำแนก</li>
+              <li>นักศึกษาเปิดวิดีโอแนะนำการใช้สื่อในหน้าหลักดูซ้ำได้ตลอดเวลา</li>
+            </ul>
+          </div>
+
+          <!-- Footer Navigation -->
+          <div class="flex items-center justify-between pt-2">
+            <button onclick="navigateTo('home')" class="px-5 py-2.5 rounded-xl bg-white border border-borderWarm hover:bg-sand text-charcoal font-medium text-sm transition-all">
+              ← กลับหน้าหลัก
+            </button>
+            <button onclick="setMissionStep(2)" class="px-6 py-3 rounded-xl bg-terracotta hover:bg-terracottaDark text-white font-bold text-sm shadow-sm transition-all">
+              ถัดไป: ขั้นที่ 2 สำรวจและค้นหา →
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    // Mission 1 - Step 2: Explore
+    function renderMission1Step2() {
+      const mysteryFossils = [
+        { code: 'ซาก A', src: 'https://thotsaphon-sk1999.github.io/fossil-3d/GLB1/1-4_Dinosaur_Vertebrae.glb', hint: 'รหัสปริศนา A (ไม่มีป้ายกำกับ)' },
+        { code: 'ซาก B', src: 'https://thotsaphon-sk1999.github.io/fossil-3d/GLB1/1-1_Fish_Scales.glb', hint: 'รหัสปริศนา B (ไม่มีป้ายกำกับ)' },
+        { code: 'ซาก C', src: 'https://thotsaphon-sk1999.github.io/fossil-3d/GLB1/1-5_teeth.glb', hint: 'รหัสปริศนา C (ไม่มีป้ายกำกับ)' },
+        { code: 'ซาก D', src: 'https://thotsaphon-sk1999.github.io/fossil-3d/GLB1/1-3_Turtle_Shell.glb', hint: 'รหัสปริศนา D (ไม่มีป้ายกำกับ)' },
+        { code: 'ซาก E', src: 'https://thotsaphon-sk1999.github.io/fossil-3d/GLB1/1-2_Crocodile_scale_sheets.glb', hint: 'รหัสปริศนา E (ไม่มีป้ายกำกับ)' },
+      ];
+
+      return `
+        ${renderMission1Header(2, 'ขั้นที่ 2 สำรวจและค้นหา (Explore)', 'ศึกษากรณีศึกษา แล้วสังเกต เปรียบเทียบ และจำแนกซากปริศนา A-E ด้วยตัวเองก่อนเห็นเฉลย', '80 นาที')}
+
+        <div class="space-y-6">
+          <!-- ลำดับงาน 6 ขั้นย่อย -->
+          <div class="bg-sand/50 rounded-2xl p-4 border border-borderWarm">
+            <div class="text-xs font-bold text-charcoal mb-2.5">ลำดับงานในขั้นนี้ (รวม 80 นาที)</div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 text-xs">
+              <div class="bg-white p-2.5 rounded-xl border border-borderWarm">
+                <div class="font-bold text-terracotta">15 นาที</div>
+                <div class="font-medium mt-0.5">กรณีศึกษา "ซากดึกดำบรรพ์บอกอะไร"</div>
+              </div>
+              <div class="bg-white p-2.5 rounded-xl border border-borderWarm">
+                <div class="font-bold text-terracotta">40 นาที</div>
+                <div class="font-medium mt-0.5">C1 สังเกตลักษณะสำคัญ (ชิ้นละ 8 นาที)</div>
+              </div>
+              <div class="bg-white p-2.5 rounded-xl border border-borderWarm">
+                <div class="font-bold text-terracotta">10 นาที</div>
+                <div class="font-medium mt-0.5">C2 เปรียบเทียบ</div>
+              </div>
+              <div class="bg-white p-2.5 rounded-xl border border-borderWarm">
+                <div class="font-bold text-terracotta">5 นาที</div>
+                <div class="font-medium mt-0.5">C3 กำหนดเกณฑ์เอง</div>
+              </div>
+              <div class="bg-white p-2.5 rounded-xl border border-borderWarm">
+                <div class="font-bold text-terracotta">5 นาที</div>
+                <div class="font-medium mt-0.5">C4 จัดกลุ่มตามเกณฑ์</div>
+              </div>
+              <div class="bg-white p-2.5 rounded-xl border border-borderWarm">
+                <div class="font-bold text-terracotta">5 นาที</div>
+                <div class="font-medium mt-0.5">C5 ให้เหตุผลและความมั่นใจ 1–4 แล้วส่ง</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- กรณีศึกษา + ใบกิจกรรม 1.1 -->
+          <div class="bg-white rounded-3xl p-6 border border-borderWarm shadow-sm space-y-5">
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold">กรณีศึกษา</span>
+              <h3 class="text-lg font-bold text-charcoal">ภาพโครงกระดูกและข้อมูลสัตว์มีกระดูกสันหลังแต่ละกลุ่ม</h3>
+            </div>
+
+            <!-- Image Placeholder -->
+            <div class="dashed-embed rounded-2xl p-6 text-center space-y-3 bg-cream">
+              <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 max-w-3xl mx-auto text-xs font-semibold text-charcoal">
+                <div class="bg-white p-2.5 rounded-xl border border-borderWarm">🐟 ปลา</div>
+                <div class="bg-white p-2.5 rounded-xl border border-borderWarm">🦈 ฉลาม</div>
+                <div class="bg-white p-2.5 rounded-xl border border-borderWarm">🐢 เต่า</div>
+                <div class="bg-white p-2.5 rounded-xl border border-borderWarm">🐊 จระเข้</div>
+                <div class="bg-white p-2.5 rounded-xl border border-borderWarm">🦇 เทอโรซอร์</div>
+                <div class="bg-white p-2.5 rounded-xl border border-borderWarm">🦖 ไดโนเสาร์</div>
+              </div>
+              <p class="text-sm font-bold text-charcoal">วางภาพอินโฟกราฟิกโครงกระดูกสัตว์ทั้ง 6 กลุ่ม (ระบุส่วนที่มักกลายเป็นซาก)</p>
+            </div>
+
+            <!-- ใบกิจกรรม 1.1 -->
+            <div class="dashed-embed rounded-2xl p-5 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded bg-purple-100 text-purple-900 text-xs font-bold">Google Forms</span>
+                <span class="text-xs text-muted">ใบกิจกรรมที่ 1.1</span>
+              </div>
+              <h4 class="font-bold text-charcoal">ใบกิจกรรมที่ 1.1 กรณีศึกษา "ซากดึกดำบรรพ์บอกอะไร"</h4>
+              <p class="text-xs text-muted">ประเด็นคำถาม: ส่วนที่มักกลายเป็นซาก เหตุที่ซากส่วนใหญ่เป็นชิ้นส่วนแยก ลักษณะเด่นของแต่ละกลุ่ม และชิ้นส่วนที่ใช้ระบุกลุ่ม</p>
+            </div>
+          </div>
+
+          <!-- โมเดล 3 มิติ ซากปริศนา A-E -->
+          <div class="bg-white rounded-3xl p-6 border border-borderWarm shadow-sm space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-900 text-xs font-bold">โมเดล 3 มิติ</span>
+                <h3 class="text-lg font-bold text-charcoal">โมเดล 3 มิติ ซากปริศนา A–E</h3>
+              </div>
+              <span class="text-xs text-muted bg-sand px-3 py-1 rounded-full">
+                🖱️ ลากเพื่อหมุน · หมุนล้อเมาส์/สองนิ้วเพื่อขยาย · คลิกขวาลาก/สามนิ้วเพื่อเลื่อน
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              ${mysteryFossils.map(item => `
+                <div class="dashed-embed rounded-2xl p-4 flex flex-col justify-between text-center space-y-3">
+                  <div class="flex items-center justify-between">
+                    <span class="px-2.5 py-0.5 rounded-lg bg-terracotta text-white text-xs font-bold">${item.code}</span>
+                    <span class="text-[10px] text-muted">3D View</span>
+                  </div>
+                  <div class="relative aspect-square rounded-xl bg-stone-200/80 border border-stone-300 overflow-hidden">
+                    <model-viewer src="${item.src}" alt="${item.code}" camera-controls touch-action="pan-y" shadow-intensity="1" loading="lazy" style="width:100%;height:100%;" onerror="this.nextElementSibling.hidden=false">
+                      <div slot="poster" class="absolute inset-0 flex items-center justify-center text-xs text-muted">กำลังโหลดโมเดล 3 มิติ…</div>
+                    </model-viewer>
+                    <div hidden class="absolute inset-0 bg-white/95 p-3 text-xs text-red-700">โหลดโมเดลไม่สำเร็จ กรุณาตรวจสอบอินเทอร์เน็ตหรือแจ้งผู้สอน</div>
+                  </div>
+                  <div class="flex flex-wrap justify-center gap-1">
+                    <button class="px-2 py-1 rounded-lg bg-sand text-xs" onclick="const m=this.parentElement.previousElementSibling.querySelector('model-viewer');m.cameraOrbit='auto auto auto';m.cameraTarget='auto auto auto';m.fieldOfView='auto';m.jumpCameraToGoal()">รีเซ็ต</button>
+                    <button class="px-2 py-1 rounded-lg bg-terracotta text-white text-xs" onclick="openFossilViewer(this)">ขยายโมเดล</button>
+                  <a class="px-2 py-1 rounded-lg bg-sand text-xs" href="${fossilLink(item.src, item.code).replace(/&/g, '&amp;')}" target="_blank" rel="noopener noreferrer">เปิดแท็บใหม่</a>
+                  </div>
+                  <p class="text-[11px] text-muted leading-tight">${item.hint}</p>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- ใบกิจกรรมที่ 1.2 + ปุ่มจำลองปลดล็อก -->
+          <div class="bg-white rounded-3xl p-6 border border-borderWarm shadow-sm space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-900 text-xs font-bold">Google Forms</span>
+                <h3 class="text-lg font-bold text-charcoal">ใบกิจกรรมที่ 1.2 สังเกต เปรียบเทียบ และจำแนกซากปริศนา A–E</h3>
+              </div>
+              <span class="text-xs font-semibold text-red-700">บังคับตอบทุกข้อ · ปิดแก้ไขหลังส่ง</span>
+            </div>
+            <p class="text-sm text-charcoal/85 font-body">
+              แบ่งส่วนตาม <strong>C1–C5</strong>: ภาพร่าง ขนาด ลักษณะอย่างน้อย 3 ลักษณะต่อชิ้น • ตารางเปรียบเทียบ • เกณฑ์ที่ตั้งเอง • กลุ่มของแต่ละชิ้น • ลักษณะตัวตัดสิน เหตุผล และความมั่นใจ 1–4
+            </p>
+            <div class="dashed-embed rounded-2xl p-6 text-center space-y-3">
+              <p class="font-bold text-charcoal">พื้นที่ฝัง Google Forms: ใบกิจกรรมที่ 1.2 (C1–C5)</p>
+              <p class="text-xs text-muted">ในข้อความยืนยันหลังส่งฟอร์ม (Confirmation Message) ให้วางลิงก์ไปยังหน้า "แฟ้มเฉลยภารกิจที่ 1" ที่ซ่อนจากเมนู</p>
+              <div class="pt-2">
+                <button onclick="simulateSubmitForm12()" class="px-5 py-2.5 rounded-xl bg-purple-700 hover:bg-purple-800 text-white font-bold text-xs sm:text-sm shadow-sm transition-all">
+                  ${state.form12Submitted ? '✓ ส่งฟอร์ม 1.2 แล้ว (ปลดล็อกขั้นที่ 3 เรียบร้อย)' : 'จำลอง: ส่งฟอร์ม 1.2 เพื่อปลดล็อกแฟ้มเฉลย'}
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer Navigation -->
+          <div class="flex items-center justify-between pt-2">
+            <button onclick="setMissionStep(1)" class="px-5 py-2.5 rounded-xl bg-white border border-borderWarm hover:bg-sand text-charcoal font-medium text-sm transition-all">
+              ← ย้อนกลับ
+            </button>
+            <button onclick="setMissionStep(3)" class="px-6 py-3 rounded-xl bg-terracotta hover:bg-terracottaDark text-white font-bold text-sm shadow-sm transition-all">
+              ถัดไป: ขั้นที่ 3 อธิบายและลงข้อสรุป →
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    // Mission 1 - Step 3: Explain (Locked State + Hidden Answer Key Preview)
+    function renderMission1Step3() {
+      const isUnlocked = state.form12Submitted || state.teacherPreviewOpen;
+
+      return `
+        ${renderMission1Header(3, 'ขั้นที่ 3 อธิบายและลงข้อสรุป (Explain)', 'เปิดแฟ้มเฉลยหลังส่งใบกิจกรรมที่ 1.2 ในขั้นสำรวจ', '45 นาที')}
+
+        <div class="space-y-6">
+          ${!isUnlocked ? `
+            <!-- Locked Card (ตามต้นแบบสื่อ 1.4) -->
+            <div class="bg-white rounded-3xl p-8 sm:p-12 border-2 border-dashed border-amber-400 shadow-sm text-center max-w-2xl mx-auto space-y-4">
+              <div class="w-16 h-16 rounded-2xl bg-amber-100 text-amber-800 mx-auto flex items-center justify-center">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                </svg>
+              </div>
+              <span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold">หน้าล็อก</span>
+              <h3 class="text-2xl font-bold text-charcoal">แฟ้มเฉลยยังถูกล็อก</h3>
+              <p class="text-sm sm:text-base text-charcoal/80 font-body leading-relaxed">
+                ส่งใบกิจกรรมที่ 1.2 สังเกต เปรียบเทียบ และจำแนกซากปริศนา A–E ในขั้นสำรวจก่อน แล้วเปิดแฟ้มเฉลยจากลิงก์ในข้อความยืนยันหลังส่ง
+              </p>
+              <div class="pt-3 flex flex-wrap items-center justify-center gap-3">
+                <button onclick="setMissionStep(2)" class="px-6 py-3 rounded-xl bg-terracotta hover:bg-terracottaDark text-white font-bold text-sm shadow-sm transition-all">
+                  กลับไปขั้นสำรวจ
+                </button>
+                <button onclick="toggleTeacherPreview()" class="px-4 py-3 rounded-xl bg-sand hover:bg-sandstone/40 text-charcoal font-medium text-xs sm:text-sm transition-all">
+                  👁️ โหมดผู้สอน: ดูตัวอย่างหน้าแฟ้มเฉลย (หน้าที่ซ่อนจากเมนู)
+                </button>
+              </div>
+              <p class="text-xs text-muted pt-2">
+                หมายเหตุผู้สร้าง: หน้านี้อยู่ในเมนู แต่ไม่มีเนื้อหาเฉลย เนื้อหาจริงอยู่ในหน้าแฟ้มเฉลยที่ซ่อนจากการนำทาง (Hide from navigation)
+              </p>
+            </div>
+          ` : `
+            <!-- Unlocked Hidden Answer Key Page Preview -->
+            <div class="bg-emerald-50/70 rounded-3xl p-6 sm:p-8 border-2 border-emerald-400 shadow-sm space-y-5">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="px-3 py-1 rounded-full bg-emerald-600 text-white text-xs font-bold">🔓 ปลดล็อกแล้ว · แฟ้มเฉลยภารกิจที่ 1</span>
+                  <h3 class="text-xl font-bold text-emerald-950">เฉลยซากปริศนา A–E และสร้างรูปจำแนก</h3>
+                </div>
+                <button onclick="state.form12Submitted=false; state.teacherPreviewOpen=false; render();" class="px-3 py-1.5 rounded-lg bg-white border border-emerald-300 text-emerald-900 text-xs font-semibold hover:bg-emerald-100">
+                  ล็อกหน้านี้กลับคืน
+                </button>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-5 gap-3">
+                <div class="bg-white p-4 rounded-2xl border border-emerald-200">
+                  <div class="text-xs font-bold text-terracotta">ซาก A</div>
+                  <div class="font-bold text-charcoal mt-1">กระดูกสันหลัง</div>
+                  <p class="text-xs text-muted mt-1">มีส่วน Centrum และช่องไขสันหลัง</p>
+                </div>
+                <div class="bg-white p-4 rounded-2xl border border-emerald-200">
+                  <div class="text-xs font-bold text-terracotta">ซาก B</div>
+                  <div class="font-bold text-charcoal mt-1">เกล็ดปลา</div>
+                  <p class="text-xs text-muted mt-1">แผ่นบาง เคลือบเงาแบบกานอยด์</p>
+                </div>
+                <div class="bg-white p-4 rounded-2xl border border-emerald-200">
+                  <div class="text-xs font-bold text-terracotta">ซาก C</div>
+                  <div class="font-bold text-charcoal mt-1">ฟัน</div>
+                  <p class="text-xs text-muted mt-1">มีชั้นเคลือบฟัน (Enamel) และรากฟัน</p>
+                </div>
+                <div class="bg-white p-4 rounded-2xl border border-emerald-200">
+                  <div class="text-xs font-bold text-terracotta">ซาก D</div>
+                  <div class="font-bold text-charcoal mt-1">แผ่นกระดองเต่า</div>
+                  <p class="text-xs text-muted mt-1">แผ่นกระดูกแบน มีรอยประสานขอบ</p>
+                </div>
+                <div class="bg-white p-4 rounded-2xl border border-emerald-200">
+                  <div class="text-xs font-bold text-terracotta">ซาก E</div>
+                  <div class="font-bold text-charcoal mt-1">เกล็ดจระเข้</div>
+                  <p class="text-xs text-muted mt-1">แผ่นกระดูกหนา มีหลุมบ่อและสันกลาง</p>
+                </div>
+              </div>
+              <div class="bg-white rounded-2xl p-4 border border-emerald-200 text-sm text-charcoal">
+                <strong>กิจกรรมลงข้อสรุป:</strong> ให้นักศึกษาตรวจสอบผลการจำแนกของตนเอง เปรียบเทียบกับเกณฑ์ทางบรรพชีวินวิทยา และร่วมกันสร้าง <strong>รูปจำแนก (Dichotomous Key)</strong> ระดับกลุ่มสัตว์มีกระดูกสันหลัง
+              </div>
+            </div>
+          `}
+
+          <!-- Footer Navigation -->
+          <div class="flex items-center justify-between pt-2">
+            <button onclick="setMissionStep(2)" class="px-5 py-2.5 rounded-xl bg-white border border-borderWarm hover:bg-sand text-charcoal font-medium text-sm transition-all">
+              ← ย้อนกลับ
+            </button>
+            <button onclick="setMissionStep(4)" class="px-6 py-3 rounded-xl bg-terracotta hover:bg-terracottaDark text-white font-bold text-sm shadow-sm transition-all">
+              ถัดไป: ขั้นที่ 4 ขยายความรู้ →
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    // Mission 1 - Step 4: Elaborate
+    function renderMission1Step4() {
+      const specimens = Array.from({ length: 10 }, (_, i) => i + 1);
+
+      return `
+        ${renderMission1Header(4, 'ขั้นที่ 4 ขยายความรู้ (Elaborate)', 'ใช้รูปจำแนกกับภาพถ่ายซากตัวอย่างจริง รวมถึงชิ้นที่ไม่สมบูรณ์', '55 นาที')}
+
+        <div class="space-y-6">
+          <!-- ลำดับงานในขั้นนี้ -->
+          <div class="bg-sand/50 rounded-2xl p-4 border border-borderWarm">
+            <div class="text-xs font-bold text-charcoal mb-2.5">ลำดับงานในขั้นนี้ (รวม 55 นาที)</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+              <div class="bg-white p-3 rounded-xl border border-borderWarm flex items-center justify-between">
+                <span class="font-medium">1. ภารกิจ "คัดแยกซากจากหลุมขุดค้น"</span>
+                <span class="px-2 py-0.5 rounded bg-sand font-bold text-xs">40 นาที</span>
+              </div>
+              <div class="bg-white p-3 rounded-xl border border-borderWarm flex items-center justify-between">
+                <span class="font-medium">2. คำถามสั้นและอภิปรายทั้งชั้น</span>
+                <span class="px-2 py-0.5 rounded bg-sand font-bold text-xs">15 นาที</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ภาพถ่ายตัวอย่างจริง 10 ชิ้น -->
+          <div class="bg-white rounded-3xl p-6 border border-borderWarm shadow-sm space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold">ภาพถ่ายตัวอย่างจริง</span>
+                <h3 class="text-lg font-bold text-charcoal">ภาพถ่ายซากตัวอย่างจริง 10 ชิ้น</h3>
+              </div>
+              <span class="text-xs text-muted">ชนิดละ 2 ชิ้น (สมบูรณ์ 1 ไม่สมบูรณ์ 1) · สุ่มลำดับ</span>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+              ${specimens.map(num => `
+                <div class="dashed-embed rounded-2xl p-3.5 text-center space-y-2.5">
+                  <div class="flex items-center justify-between">
+                    <span class="px-2 py-0.5 rounded-md bg-charcoal text-white text-xs font-bold">ชิ้นที่ ${num}</span>
+                    <span class="text-[10px] text-muted">#0${num < 10 ? '0' + num : num}</span>
+                  </div>
+                  <div class="aspect-[4/3] rounded-xl bg-stone-100 border border-stone-200 flex flex-col items-center justify-center p-2">
+                    <svg class="w-8 h-8 text-terracotta/70 mb-1" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span class="text-[11px] font-semibold text-charcoal">2–3 มุม + สเกลบาร์</span>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- Google Forms ภารกิจคัดแยกซากจากหลุมขุดค้น -->
+          <div class="bg-white rounded-3xl p-6 border border-borderWarm shadow-sm space-y-3">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-900 text-xs font-bold">Google Forms</span>
+                <h3 class="text-lg font-bold text-charcoal">ภารกิจ "คัดแยกซากจากหลุมขุดค้น"</h3>
+              </div>
+              <span class="text-xs text-muted">แสดงผลป้อนกลับทันที · ไม่นำไปคิดคะแนน E1</span>
+            </div>
+            <div class="dashed-embed rounded-2xl p-6 text-center space-y-2">
+              <p class="font-bold text-charcoal">พื้นที่ฝัง Google Forms: ไล่รูปจำแนกด้วย "ไปยังส่วนตามคำตอบ"</p>
+              <p class="text-xs text-muted">ระบุกลุ่ม ลักษณะตัดสิน และความมั่นใจ 1–4 พร้อมรับผลป้อนกลับทันทีหลังส่ง</p>
+            </div>
+          </div>
+
+          <!-- ผู้สอนนำในชั้นเรียน -->
+          <div class="rounded-3xl bg-amber-50 border-2 border-amber-300 p-6 space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 rounded-full bg-amber-500 text-white text-xs font-bold">ผู้สอนนำในชั้นเรียน</span>
+              <h4 class="font-bold text-amber-950">คำถามสั้นและอภิปรายทั้งชั้น (15 นาที)</h4>
+            </div>
+            <p class="text-sm sm:text-base font-medium text-amber-950">
+              "เหตุใดบางชิ้นจำแนกได้เพียงระดับกลุ่มใหญ่ และเหตุใดนักบรรพชีวินวิทยาจึงต้องใช้หลายลักษณะร่วมกัน"
+            </p>
+          </div>
+
+          <!-- Footer Navigation -->
+          <div class="flex items-center justify-between pt-2">
+            <button onclick="setMissionStep(3)" class="px-5 py-2.5 rounded-xl bg-white border border-borderWarm hover:bg-sand text-charcoal font-medium text-sm transition-all">
+              ← ย้อนกลับ
+            </button>
+            <button onclick="setMissionStep(5)" class="px-6 py-3 rounded-xl bg-terracotta hover:bg-terracottaDark text-white font-bold text-sm shadow-sm transition-all">
+              ถัดไป: ขั้นที่ 5 ประเมินผล →
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    // Mission 1 - Step 5: Evaluate
+    function renderMission1Step5() {
+      return `
+        ${renderMission1Header(5, 'ขั้นที่ 5 ประเมินผล (Evaluate)', 'วัดทักษะการจัดจำแนกครั้งที่ 1 และสะท้อนคิด', '30 นาที')}
+
+        <div class="space-y-6">
+          <!-- ลำดับงานในขั้นนี้ -->
+          <div class="bg-sand/50 rounded-2xl p-4 border border-borderWarm">
+            <div class="text-xs font-bold text-charcoal mb-2.5">ลำดับงานในขั้นนี้ (รวม 30 นาที)</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+              <div class="bg-white p-3 rounded-xl border border-borderWarm flex items-center justify-between">
+                <span class="font-medium">1. แบบวัดทักษะการจัดจำแนก ครั้งที่ 1</span>
+                <span class="px-2 py-0.5 rounded bg-sand font-bold text-xs">20 นาที</span>
+              </div>
+              <div class="bg-white p-3 rounded-xl border border-borderWarm flex items-center justify-between">
+                <span class="font-medium">2. สะท้อนคิดและงานก่อนภารกิจที่ 2</span>
+                <span class="px-2 py-0.5 rounded bg-sand font-bold text-xs">10 นาที</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- แบบวัดทักษะการจัดจำแนก ครั้งที่ 1 -->
+          <div class="bg-white rounded-3xl p-6 border border-borderWarm shadow-sm space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-terracotta text-white text-xs font-bold">แบบวัด / แบบทดสอบ</span>
+                <h3 class="text-lg font-bold text-charcoal">แบบวัดทักษะการจัดจำแนก ครั้งที่ 1</h3>
+              </div>
+              <span class="text-xs font-semibold text-terracotta">20 ข้อ เวลา 20 นาที (C1–C5 องค์ประกอบละ 4 ข้อ)</span>
+            </div>
+            <div class="dashed-embed rounded-2xl p-8 text-center space-y-2">
+              <p class="font-bold text-charcoal">พื้นที่ฝัง Google Forms: แบบวัดทักษะการจัดจำแนก ครั้งที่ 1 (20 ข้อ)</p>
+              <p class="text-xs text-muted">ใช้คิดคะแนน E1 (20 คะแนน) ข้อคำถามและภาพไม่ซ้ำกับแบบทดสอบก่อน–หลังเรียน แสดงคะแนนและเฉลยหลังส่งได้</p>
+            </div>
+          </div>
+
+          <!-- Google Forms สะท้อนคิด -->
+          <div class="bg-white rounded-3xl p-6 border border-borderWarm shadow-sm space-y-4">
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-900 text-xs font-bold">Google Forms</span>
+              <h3 class="text-lg font-bold text-charcoal">สะท้อนคิด</h3>
+            </div>
+            <div class="dashed-embed rounded-2xl p-6 text-center space-y-2">
+              <p class="font-bold text-charcoal">พื้นที่ฝัง Google Forms: สะท้อนคิดหลังเรียนภารกิจที่ 1</p>
+              <p class="text-xs text-muted">คำถามสะท้อนคิด: "สิ่งที่ได้เรียนรู้วันนี้ 1 อย่าง และลักษณะที่ยังจำแนกได้ยาก 1 ข้อ"</p>
+            </div>
+          </div>
+
+          <!-- ข้อความ งานก่อนภารกิจที่ 2 -->
+          <div class="bg-sand/70 rounded-3xl p-6 border border-borderWarm space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 rounded-full bg-charcoal text-white text-xs font-bold">ข้อความ</span>
+              <h3 class="text-lg font-bold text-charcoal">งานก่อนภารกิจที่ 2</h3>
+            </div>
+            <p class="text-sm sm:text-base font-medium text-charcoal">
+              📌 สืบค้นไดโนเสาร์ชนิดใหม่ที่พบในจังหวัดนครราชสีมา
+            </p>
+          </div>
+
+          <!-- Footer Navigation -->
+          <div class="flex items-center justify-between pt-2">
+            <button onclick="setMissionStep(4)" class="px-5 py-2.5 rounded-xl bg-white border border-borderWarm hover:bg-sand text-charcoal font-medium text-sm transition-all">
+              ← ย้อนกลับ
+            </button>
+            <button onclick="navigateTo('mission2')" class="px-6 py-3 rounded-xl bg-terracotta hover:bg-terracottaDark text-white font-bold text-sm shadow-sm transition-all">
+              จบภารกิจ ไปภารกิจที่ 2 →
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    // Render Mission 2 or Mission 3 Overview Template
+    function renderOtherMission(num) {
+      const data = num === 2 ? {
+        badge: 'ภารกิจที่ 2',
+        title: 'นักขุดค้นสะพานหิน',
+        meta: 'แผนที่ 2 • สัปดาห์ที่ 11 • 240 นาที',
+        desc: 'เปิดหลุมขุดค้นจำลองเพื่อพบฟัน 5 กลุ่ม ได้แก่ ไดโนเสาร์กินเนื้อ อิกัวโนดอนต์ เทอโรซอร์ จระเข้ และฉลามน้ำจืด แล้วจำแนกด้วยเกณฑ์ลักษณะฟัน',
+        items: ['ฟันไดโนเสาร์กินเนื้อ (Theropod)', 'ฟันอิกัวโนดอนต์ (Iguanodontid)', 'ฟันเทอโรซอร์ (Pterosaur)', 'ฟันจระเข้ (Crocodyliform)', 'ฟันฉลามน้ำจืด (Freshwater Shark)'],
+        note: 'แบบวัดทักษะการจัดจำแนก ครั้งที่ 2 (20 ข้อ 20 นาที) อยู่ในขั้นที่ 5 Evaluate ของภารกิจนี้'
+      } : {
+        badge: 'ภารกิจที่ 3',
+        title: 'ฟันใครเอ่ย ใต้บ่อทราย',
+        meta: 'แผนที่ 3 • สัปดาห์ที่ 12 • 240 นาที',
+        desc: 'สังเกตและจำแนกฟันสัตว์เลี้ยงลูกด้วยนม 5 ชนิด ได้แก่ ม้าฮิปปาเรียน แรด หมูป่า ฮิปโป และช้างสเตโกโลโฟดอน แล้วเปรียบเทียบสองแหล่ง สองโลก',
+        items: ['ฟันม้าฮิปปาเรียน (Hipparion)', 'ฟันแรด (Rhinoceros)', 'ฟันหมูป่า (Suidae)', 'ฟันฮิปโปโปเตมัส (Hippopotamus)', 'ฟันช้างสเตโกโลโฟดอน (Stegolophodon)'],
+        note: 'แบบวัดทักษะการจัดจำแนก ครั้งที่ 3 (20 ข้อ) และ แบบทดสอบวัดทักษะการจัดจำแนกหลังเรียน (30 ข้อ 20 นาที) อยู่ในขั้นที่ 5 Evaluate ของภารกิจนี้'
+      };
+
+      return `
+        <div class="bg-white rounded-3xl p-6 sm:p-10 border border-borderWarm shadow-sm space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <span class="px-3.5 py-1 rounded-full bg-terracotta text-white text-xs font-bold">${data.badge}</span>
+            <span class="text-xs font-bold text-muted bg-sand px-3 py-1 rounded-full">${data.meta}</span>
+          </div>
+          <div class="space-y-2">
+            <h2 class="text-2xl sm:text-3xl font-bold text-charcoal">${data.title}</h2>
+            <p class="text-sm sm:text-base text-charcoal/85 font-body leading-relaxed">${data.desc}</p>
+          </div>
+
+          <div class="bg-cream rounded-2xl p-5 border border-borderWarm space-y-3">
+            <div class="text-xs font-bold text-terracotta uppercase">โครงสร้าง 5 หน้าย่อย (5E Learning Cycle) ที่พร้อมขยายต่อ</div>
+            <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 text-xs">
+              <div class="bg-white p-3 rounded-xl border border-borderWarm font-semibold">1. Engage</div>
+              <div class="bg-white p-3 rounded-xl border border-borderWarm font-semibold">2. Explore</div>
+              <div class="bg-white p-3 rounded-xl border border-borderWarm font-semibold">3. Explain (หน้าล็อก)</div>
+              <div class="bg-white p-3 rounded-xl border border-borderWarm font-semibold">4. Elaborate</div>
+              <div class="bg-white p-3 rounded-xl border border-borderWarm font-semibold">5. Evaluate</div>
+            </div>
+            <div class="pt-2">
+              <div class="text-xs font-bold text-charcoal mb-2">ตัวอย่างซากดึกดำบรรพ์ในภารกิจนี้:</div>
+              <div class="flex flex-wrap gap-2">
+                ${data.items.map(i => `<span class="px-3 py-1 rounded-full bg-white border border-borderWarm text-xs font-medium">${i}</span>`).join('')}
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs sm:text-sm text-amber-950">
+            ℹ️ ${data.note}
+          </div>
+
+          <div class="flex items-center justify-between pt-2">
+            <button onclick="navigateTo('mission1', 5)" class="px-5 py-2.5 rounded-xl bg-white border border-borderWarm hover:bg-sand text-charcoal font-medium text-sm transition-all">
+              ← กลับไปภารกิจที่ 1
+            </button>
+            <button onclick="navigateTo('home')" class="px-6 py-3 rounded-xl bg-terracotta hover:bg-terracottaDark text-white font-bold text-sm shadow-sm transition-all">
+              กลับสู่หน้าหลัก
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    // Main Render Switch
+    function render() {
+      updateNavStyles();
+      const container = document.getElementById('app-content');
+      if (state.currentPage === 'home') {
+        container.innerHTML = renderHome();
+      } else if (state.currentPage === 'mission1') {
+        switch (state.mission1Step) {
+          case 1: container.innerHTML = renderMission1Step1(); break;
+          case 2: container.innerHTML = renderMission1Step2(); break;
+          case 3: container.innerHTML = renderMission1Step3(); break;
+          case 4: container.innerHTML = renderMission1Step4(); break;
+          case 5: container.innerHTML = renderMission1Step5(); break;
+        }
+      } else if (state.currentPage === 'mission2') {
+        container.innerHTML = renderOtherMission(2);
+      } else if (state.currentPage === 'mission3') {
+        container.innerHTML = renderOtherMission(3);
+      }
+    }
+
+    // Initialize on load
+
+    function fossilSource(button) {
+      return button.parentElement.previousElementSibling.querySelector('model-viewer');
+    }
+    function fossilTabURL(model) {
+      const url = new URL('https://thotsaphon-sk1999.github.io/fossil-3d/index.html');
+      url.search = ''; url.hash = '';
+      url.searchParams.set('fossil', model.getAttribute('src'));
+      url.searchParams.set('label', model.getAttribute('alt') || 'โมเดล 3 มิติ');
+      return url.href;
+    }
+    function fossilLink(src, label) {
+      const url = new URL('https://thotsaphon-sk1999.github.io/fossil-3d/index.html');
+      url.searchParams.set('fossil', src);
+      url.searchParams.set('label', label);
+      return url.href;
+    }
+    function showFossilDialog(src, label, standalone = false) {
+      const dialog = document.createElement('dialog');
+      dialog.id = 'fossil-dialog';
+      dialog.setAttribute('aria-label', label);
+      const bar = document.createElement('header');
+      const title = document.createElement('strong'); title.textContent = label; bar.append(title);
+      const model = document.createElement('model-viewer');
+      model.setAttribute('src', src); model.setAttribute('alt', label);
+      model.setAttribute('camera-controls', ''); model.setAttribute('touch-action', 'none');
+      model.setAttribute('shadow-intensity', '1');
+      function button(label, action) { const b = document.createElement('button'); b.textContent = label; b.onclick = action; bar.append(b); return b; }
+      button('รีเซ็ต', () => { model.cameraOrbit='auto auto auto'; model.cameraTarget='auto auto auto'; model.fieldOfView='auto'; model.jumpCameraToGoal?.(); });
+      button('เต็มหน้าจอ', async () => {
+        try { if (document.fullscreenElement) await document.exitFullscreen(); else if (document.fullscreenEnabled && dialog.requestFullscreen) await dialog.requestFullscreen(); else throw Error(); }
+        catch { status.textContent = 'ขยายเต็มพื้นที่ฝังแล้ว หากต้องการเต็มจอจริง กรุณาเปิดแท็บใหม่'; }
+      });
+      if (!standalone) { const link = document.createElement('a'); link.href = fossilTabURL(model); link.target='_blank'; link.rel='noopener noreferrer'; link.textContent='เปิดแท็บใหม่'; bar.append(link); }
+      button(standalone ? 'กลับหน้าหลัก' : 'ปิด', () => { if (standalone) location.href='https://thotsaphon-sk1999.github.io/fossil-3d/index.html'; else dialog.close(); });
+      const status = document.createElement('p'); status.setAttribute('role','status'); status.style.padding='4px 12px';
+      status.textContent = 'กำลังโหลดโมเดล 3 มิติ…';
+      model.addEventListener('load', () => { status.textContent = 'ลากเพื่อหมุน • เลื่อนเพื่อซูม'; });
+      model.addEventListener('error', () => { status.textContent='โหลดโมเดลไม่สำเร็จ กรุณาตรวจสอบไฟล์หรืออินเทอร์เน็ต'; });
+      dialog.append(bar, status, model); document.body.append(dialog);
+      dialog.addEventListener('close', () => { if(document.fullscreenElement===dialog) document.exitFullscreen().catch(()=>{}); dialog.remove(); });
+      dialog.showModal();
+    }
+    function openFossilViewer(button) { const model=fossilSource(button); showFossilDialog(model.getAttribute('src'), model.getAttribute('alt')); }
+    function initializeFossilPage() {
+      const params = new URLSearchParams(location.search);
+      const src = params.get('fossil');
+      if (src && /^https:\/\/thotsaphon-sk1999\.github\.io\/fossil-3d\/GLB[123]\/[^/?#]+\.glb$/i.test(src)) { showFossilDialog(src, params.get('label') || 'โมเดล 3 มิติ', true); } else { render(); }
+    }
+    window.addEventListener('DOMContentLoaded', initializeFossilPage);
+  </script>
+</body>
+</html>
